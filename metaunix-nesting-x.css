@@ -1,0 +1,21 @@
+/* Nesting X: only the activated Sixshop page is affected. */
+html.mx-nesting-x-active,
+html.mx-nesting-x-active body {
+  overflow: hidden !important;
+  overscroll-behavior: none;
+}
+html.mx-nesting-x-active #metaunix-nesting-x-frame {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100vh !important;
+  height: 100dvh !important;
+  max-width: none !important;
+  max-height: none !important;
+  border: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  display: block !important;
+  background: #111115;
+  z-index: 2147483000 !important;
+}
