@@ -1,21 +1,26 @@
-/* Nesting X: only the activated Sixshop page is affected. */
-html.mx-nesting-x-active,
-html.mx-nesting-x-active body {
-  overflow: hidden !important;
-  overscroll-behavior: none;
-}
-html.mx-nesting-x-active #metaunix-nesting-x-frame {
-  position: fixed !important;
-  inset: 0 !important;
-  width: 100% !important;
-  height: 100vh !important;
-  height: 100dvh !important;
-  max-width: none !important;
-  max-height: none !important;
-  border: 0 !important;
-  margin: 0 !important;
-  padding: 0 !important;
-  display: block !important;
-  background: #111115;
-  z-index: 2147483000 !important;
-}
+/* Nesting X | Sixshop header-preserving loader (2026-11-23) */
+#mx-nesting-inline-host {
+    position: relative !important;
+    display: block !important;
+    width: 100vw !important;
+    max-width: none !important;
+    margin: 0 0 0 calc(50% - 50vw) !important;
+    padding: 0 !important;
+    border: 0 !important;
+    clear: both !important;
+    background: #111115;
+  }
+  #mx-nesting-inline-frame {
+    position: static !important;
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    height: calc(100vh - var(--mx-site-header-height, 0px)) !important;
+    height: calc(100dvh - var(--mx-site-header-height, 0px)) !important;
+    min-height: 560px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: 0 !important;
+    background: #111115;
+    z-index: auto !important;
+  }
